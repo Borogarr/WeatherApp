@@ -2,7 +2,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Main {
+public class Main extends GetWeather {
 
 	/**
 	 * @param args
@@ -22,6 +22,13 @@ public class Main {
 		
 		JButton button2 = new JButton("Opeth");
 		panel.add(button2);
-	}
+                
+                try {
+                GetWeather.xmlLoader();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();;
+                }
 
+    }
 }
